@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Tentacode{% endblock %}</title>
+
+        <meta name="description" content="Tentacode blog about technical stuff and shenanigans.">
+        <meta name="author" content="Gabriel Pillet">
+
+        {% block stylesheets %}
+            <link rel="stylesheet" href="/built/bootstrap/css/bootstrap.css">
+            <link rel="stylesheet" href="/built/css/blog.css">
+        {% endblock %}
+    </head>
+    <body>  
+        {% block body %}
+            <div class="container">
+                {% block content '' %}
+            </div>
+        {% endblock %}
+
+        {% block javascripts %}
+            <script type="text/javascript" src="/built/jquery/js/jquery.js"></script>
+            <script type="text/javascript" src="/built/bootstrap/js/bootstrap.js"></script>
+            <script type="text/javascript" src="/built/js/blog.js"></script>
+        {% endblock %}
+    </body>
+</html>
