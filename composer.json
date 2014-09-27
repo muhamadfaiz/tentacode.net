@@ -4,13 +4,15 @@
         "psr-0": { "": "src/", "SymfonyStandard": "app/" }
     },
     "require": {
+        "php": "~5.6.0",
         "silex/silex": "*",
         "twig/twig": "*",
         "kzykhys/ciconia": "*",
         "symfony/twig-bridge": "*"
     },
     "require-dev": {
-        "phpspec/phpspec": "~2@dev"
+        "phpspec/phpspec": "~2@dev",
+        "heroku/heroku-buildpack-php": "~43.0"
     },
     "config": {
         "bin-dir": "bin"
