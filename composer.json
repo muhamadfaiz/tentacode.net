@@ -8,7 +8,8 @@
         "silex/silex": "*",
         "twig/twig": "*",
         "kzykhys/ciconia": "*",
-        "symfony/twig-bridge": "*"
+        "symfony/twig-bridge": "*",
+        "symfony/finder": "~2.5"
     },
     "require-dev": {
         "phpspec/phpspec": "~2@dev",
