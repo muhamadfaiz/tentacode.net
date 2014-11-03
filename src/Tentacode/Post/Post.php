@@ -10,6 +10,9 @@ class Post
     protected $slug;
     protected $date;
 
+    /**
+     * @param string $slug
+     */
     public function __construct(Content $content, $slug, DateTime $date)
     {
         $this->content = $content;
