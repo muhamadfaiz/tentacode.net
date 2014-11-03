@@ -8,6 +8,9 @@ class Content
 {
     protected $markdown;
 
+    /**
+     * @param string $markdown
+     */
     public function __construct($markdown)
     {  
         $this->markdown = $markdown;
