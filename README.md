@@ -5,3 +5,11 @@
 [![Build Status](https://scrutinizer-ci.com/g/tentacode/tentacode-blog/badges/build.png?b=master)](https://scrutinizer-ci.com/g/tentacode/tentacode-blog/build-status/master)
 
 # Tentacode Blog
+
+## Setup
+
+```
+composer install
+npm install
+grunt
+```
