@@ -79,13 +79,6 @@ module.exports = function(grunt) {
         ],
         dest: '<%= dirs.built.js %>/blog.js'
       }
-      // css: {
-      //   src: [
-      //     '<%= dirs.fontawesome %>/css/*.css',
-      //     '<%= dirs.blog.css %>/*.css',
-      //   ],
-      //   dest: '<%= dirs.built.css %>/blog.css'
-      // },
     },
 
     // Uglify
