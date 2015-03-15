@@ -1,15 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <h1>Post lists</h1>
+    {% for post in posts %}
+        <article class="main-content__post scrollme">
+            <header class="post__header">
+                <time class="post__time" datetime="{{ post.date|date('Y-m-d') }}">
+                    <span class="time_large">
+                        {{ post.date|date('j') }}
+                        <sup>{{ post.date|date('S') }}</sup>
+                    </span> {{ post.date|date('F') }}, {{ post.date|date('Y') }}
+                </time>
+                <h2 class="post__title"><a href="{{ path('post', {'slug': post.slug}) }}">{{ post.content.title }}</a></h2>
+            </header>
 
-    <ul>
-        {% for post in posts %}
-            <li>
-                <a href="{{ path('post', {'slug': post.slug}) }}">
-                    {{ post.content.title }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+            <div class="post__content">
+                <p class="post__excerpt">{{ post.content.excerpt(400) }}</p>
+            </div>
+
+            <div class="post__button">
+                <a class="btn" href="{{ path('post', {'slug': post.slug}) }}">read</a>
+            </div>
+        </article>
+    {% endfor %}
 {% endblock %}

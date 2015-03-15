@@ -12,20 +12,15 @@ module.exports = function(grunt) {
     // Path configuration from Gruntfile.js
     dirs: {
       'vendor': '<%= bowerrc.directory %>',
-      'jquery': {
-        'js': '<%= dirs.vendor %>/jquery/dist',
-      },
-      'bootstrap': {
-        'js': '<%= dirs.vendor %>/bootstrap/dist/js',
-        'less': '<%= dirs.vendor %>/bootstrap/less/bootstrap.less'
-      },
+      'fontawesome': '<%= dirs.vendor %>/font-awesome',
       'blog': {
         'js': 'js',
         'less': 'less'
       },
       'built': {
         'js': 'web/built/js',
-        'css': 'web/built/css'
+        'css': 'web/built/css',
+        'fonts': 'web/built/fonts'
       }
     },
 
@@ -43,16 +38,20 @@ module.exports = function(grunt) {
       }
     },
 
-    // Concatenation
-    concat: {
-      js: {
-        src: [
-          '<%= dirs.jquery.js %>/jquery.min.js',
-          '<%= dirs.bootstrap.js %>/bootstrap.min.js',
-          '<%= dirs.blog.js %>/*.js',
-        ],
-        dest: '<%= dirs.built.js %>/blog.js'
-      },
+    // Copy
+    copy: {
+      fontawesome: {
+        files: [
+          // includes files within path
+          {
+            expand: true,
+            cwd: '<%= dirs.fontawesome %>/fonts',
+            src: '**',
+            dest: '<%= dirs.built.fonts %>',
+            filter: 'isFile'
+          }
+        ]
+      }
     },
 
     // LESS
@@ -63,10 +62,30 @@ module.exports = function(grunt) {
       },
       blog: {
         files: { '<%= dirs.built.css %>/blog.css': [
-          '<%= dirs.bootstrap.less %>',
-          '<%= dirs.blog.less %>/*.less'
+           '<%= dirs.fontawesome %>/css/*.css',
+          '<%= dirs.blog.less %>/reset.less',
+          '<%= dirs.blog.less %>/grid.less',
+          '<%= dirs.blog.less %>/layout.less',
+          '<%= dirs.blog.less %>/blog.less'
         ]}
       }
+    },
+
+    // Concatenation
+    concat: {
+      js: {
+        src: [
+          '<%= dirs.blog.js %>/*.js',
+        ],
+        dest: '<%= dirs.built.js %>/blog.js'
+      }
+      // css: {
+      //   src: [
+      //     '<%= dirs.fontawesome %>/css/*.css',
+      //     '<%= dirs.blog.css %>/*.css',
+      //   ],
+      //   dest: '<%= dirs.built.css %>/blog.css'
+      // },
     },
 
     // Uglify
@@ -99,6 +118,7 @@ module.exports = function(grunt) {
   });
 
   // Load plugins
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-bower-task');
@@ -107,9 +127,9 @@ module.exports = function(grunt) {
 
   // Callable tasks
   grunt.registerTask('default', [
-    'bower', 
+    'copy',
+    'less',
     'concat',
     'uglify',
-    'less',
   ]);
 };
