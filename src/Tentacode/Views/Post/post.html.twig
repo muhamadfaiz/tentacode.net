@@ -2,8 +2,6 @@
 
 {% block content %}
     <article class="post-content__post">
-
-        <!-- Post header -->
         <header class="post__header">
             <time class="post__time" datetime="{{ post.date|date('Y-m-d') }}">
                 <span class="time_large">
@@ -12,10 +10,9 @@
                 </span> {{ post.date|date('F') }}, {{ post.date|date('Y') }}
             </time>
             <h1 class="post__title">{{ post.content.title }}</h1>
+            <div class="single-post__content">
+                {{ post.content.body|raw }}
+            </div>
         </header>
-
-        <div class="single-post__content">
-            {{ post.content.body|raw }}
-        </div>
     </article>
 {% endblock %}

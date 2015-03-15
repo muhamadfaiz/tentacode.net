@@ -39,6 +39,11 @@
                     </section>
 
                     {% include 'Author/twitter.html.twig' %}
+
+                    {% block comments %}
+                        {% include 'Post/comments.html.twig' %}
+                    {% endblock %}
+
                     {% include 'Layout/footer.html.twig' %}
                 </div>
             </div>

@@ -6,7 +6,12 @@
 
 # Tentacode Blog
 
+Oh hi. It's the code of [my blog](http://tentacode.net).
+
 ## Setup
+
+If you want to run it yourself, it's as simple as :
+
 
 ```
 composer install
