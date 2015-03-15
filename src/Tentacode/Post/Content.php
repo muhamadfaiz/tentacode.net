@@ -25,6 +25,27 @@ class Content
         return '';
     }
 
+    public function getText()
+    {
+        $html = $this->getBody();
+
+        return strip_tags($html);
+    }
+
+    public function getExcerpt($characterCount)
+    {
+        $text = trim($this->getText());
+        if (strlen($text) <= $characterCount) {
+            return $text;
+        }
+
+        $text = substr($text, 0, $characterCount);
+        $text = substr($text, 0, strrpos($text,' '));
+        $text = $text."…";
+
+        return $text;
+    }
+
     public function getBody()
     {
         $markdown = $this->getMarkdownBody();
