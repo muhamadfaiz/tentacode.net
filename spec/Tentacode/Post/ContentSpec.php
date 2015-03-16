@@ -32,4 +32,9 @@ EOD;
     {
         $this->getBody()->shouldReturn("<p>C'était des pâtes <strong>arrabiata</strong>.</p>");
     }
+
+    function it_can_get_a_text_exerpt()
+    {
+        $this->getExcerpt(15)->shouldReturn("C'était des…");
+    }
 }
