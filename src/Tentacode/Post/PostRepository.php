@@ -79,6 +79,17 @@ class PostRepository
 
     protected function sortPosts(array $posts)
     {
+        uasort($posts, function($postA, $postB) {
+            $dateA = $postA->getDate();
+            $dateB = $postB->getDate();
+
+            if ($dateA == $dateB) {
+                return 0;
+            }
+
+            return ($dateA < $dateB) ? 1 : -1;
+        });
+
         return $posts;
     }
 }
