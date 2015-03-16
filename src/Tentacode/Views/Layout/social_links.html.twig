@@ -1,4 +1,21 @@
-<li><a class="social-link social-link--first" href="https://github.com/tentacode"><i class="fa fa-github-alt"></i></a></li>
-<li><a class="social-link" href="https://twitter.com/tentacode"><i class="fa fa-twitter"></i></a></li>
-<li><a class="social-link" href="https://www.facebook.com/gabriel.pillet"><i class="fa fa-facebook"></i></a></li>
-<li><a class="social-link" href="https://www.facebook.com/goatfatherstoner"><i class="fa fa-music"></i></a></li>
+{% set fullSocialLinks = fullSocialLinks|default(false) %}
+<li>
+    <a class="social-link social-link--first" href="https://github.com/tentacode">
+        <i class="fa fa-github-alt"></i>{% if fullSocialLinks %} Github{% endif %}
+    </a>
+</li>
+<li>
+    <a class="social-link" href="https://twitter.com/tentacode">
+        <i class="fa fa-twitter"></i>{% if fullSocialLinks %} Twitter{% endif %}
+    </a>
+</li>
+<li>
+    <a class="social-link" href="https://www.facebook.com/gabriel.pillet">
+        <i class="fa fa-facebook"></i>{% if fullSocialLinks %} Facebook{% endif %}
+    </a>
+</li>
+<li>
+    <a class="social-link" href="https://www.facebook.com/goatfatherstoner">
+        <i class="fa fa-music"></i>{% if fullSocialLinks %} Music{% endif %}
+    </a>
+</li>

@@ -75,6 +75,7 @@ module.exports = function(grunt) {
     concat: {
       js: {
         src: [
+          '<%= dirs.vendor %>/jquery/dist/jquery.min.js',
           '<%= dirs.blog.js %>/*.js',
         ],
         dest: '<%= dirs.built.js %>/blog.js'
