@@ -26,18 +26,26 @@ class Application extends BaseApplication
         $this->register(new UrlGeneratorServiceProvider());
 
         $this->get('/', function() { 
-            return $this->render('Post/list.html.twig', [
+            return $this->renderPratchettResponse('Post/list.html.twig', [
                 'posts' => $this->postRepository->getPosts()
             ]); 
         }); 
 
         $this
             ->get('/{slug}', function($slug) { 
-                return $this->render('Post/post.html.twig', [
+                return $this->renderPratchettResponse('Post/post.html.twig', [
                     'post' => $this->postRepository->findPostBySlug($slug)
                 ]); 
             })
             ->bind('post')
         ;
+    }
+
+    public function renderPratchettResponse($template, array $parameters = [])
+    {
+        $response = $this->render($template, $parameters);
+        $response->headers->set('X-Clacks-Overhead', 'GNU Terry Pratchett');
+
+        return $response;
     }
 }
