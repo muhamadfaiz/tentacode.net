@@ -37,4 +37,18 @@ EOD;
     {
         $this->getExcerpt(15)->shouldReturn("C'était des…");
     }
+
+    function it_renders_github_code_markdown()
+    {
+        $markdown = <<<'EOD'
+```php
+function print_and_stop($message) { die($message); }
+```
+EOD;
+
+        $this->beConstructedWith($markdown);
+        $this->getBody()->shouldReturn(
+            "<pre><code class=\"language-php\">function print_and_stop(\$message) { die(\$message); }</code></pre>"
+        );
+    }
 }

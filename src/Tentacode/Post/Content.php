@@ -2,7 +2,7 @@
 
 namespace Tentacode\Post;
 
-use Ciconia\Ciconia;
+use Parsedown;
 
 class Content
 {
@@ -49,9 +49,9 @@ class Content
     public function getBody()
     {
         $markdown = $this->getMarkdownBody();
-        $ciconia = new Ciconia();
+        $parser = new Parsedown();
         
-        return $ciconia->render($markdown);
+        return $parser->text($markdown);
     }
 
     protected function getMarkdownBody()

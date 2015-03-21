@@ -14,7 +14,7 @@ A blog is just a blog, and generic projects do have a tendency to be a pain in t
 
 ### ⇢ What I did
 
-I tried to focus only on blogging, so I ended up writing the smallest application for handling posts with [Silex](http://silex.sensiolabs.org/) micro-framework and [Ciconia](https://github.com/kzykhys/Ciconia) a small library to parse Markdown content. I also used a pro website template that I just tweaked a bit to make it more personal.
+I tried to focus only on blogging, so I ended up writing the smallest application for handling posts with [Silex](http://silex.sensiolabs.org/) micro-framework and [Parsedown](http://parsedown.org/) a small library to parse Markdown content. I also used a pro website template that I just tweaked a bit to make it more personal.
 
 ## I don't want to be the sysadmin of my blog
 

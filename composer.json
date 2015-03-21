@@ -7,9 +7,9 @@
         "php": "~5.5.0",
         "silex/silex": "*",
         "twig/twig": "*",
-        "kzykhys/ciconia": "*",
         "symfony/twig-bridge": "*",
-        "symfony/finder": "~2.5"
+        "symfony/finder": "~2.5",
+        "erusev/parsedown": "~1.5"
     },
     "require-dev": {
         "phpspec/phpspec": "~2@dev",
