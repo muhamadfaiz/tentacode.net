@@ -63,6 +63,7 @@ module.exports = function(grunt) {
       blog: {
         files: { '<%= dirs.built.css %>/blog.css': [
            '<%= dirs.fontawesome %>/css/*.css',
+          '<%= dirs.blog.less %>/prism.less',
           '<%= dirs.blog.less %>/reset.less',
           '<%= dirs.blog.less %>/grid.less',
           '<%= dirs.blog.less %>/layout.less',

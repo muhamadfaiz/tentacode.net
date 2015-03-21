@@ -1,4 +1,5 @@
 @import 'variables.less';
+@import 'mixins.less';
 
 .menu-button::before
 {
@@ -72,9 +73,25 @@
 .post__title
 {
     margin: .6em 0 .9em 0;
+    @media @mobile {
+        margin-top: 1em;
+    }
 }
 
 .footer__socials
 {
     margin: 0;
+}
+
+.post__time:after {
+}
+
+.footer
+{
+    .hideOnMobile();
+}
+
+pre[class*=language-]
+{
+    .postWidget();
 }

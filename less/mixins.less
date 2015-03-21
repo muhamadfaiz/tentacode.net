@@ -1,0 +1,16 @@
+@mobile: ~"screen and (max-width: 767px)";
+
+.postWidget()
+{
+    margin: 0 60px 30px;
+    @media @mobile {
+        margin: 0 0 30px;
+    }
+}
+
+.hideOnMobile()
+{
+    @media @mobile {
+        display: none;
+    }
+}
