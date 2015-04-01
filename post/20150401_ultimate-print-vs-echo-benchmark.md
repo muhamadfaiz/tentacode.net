@@ -24,7 +24,7 @@ sys    0m1.820s
 
 ## Round 1 - Fight!
 
-The script will be as simple as it can be, just iterating 10 billion times the same function, here is `echo.php`:
+The script will be as simple as it can be, just iterating 10 million times the same function, here is `echo.php`:
 
 ```php
 <?php
