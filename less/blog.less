@@ -95,3 +95,10 @@ pre[class*=language-]
 {
     .postWidget();
 }
+
+:not(pre) > code
+{
+    padding: 2px 5px;
+    border-radius: 3px;
+    background: lighten(@focusbackground, 30%);
+}
