@@ -88,5 +88,5 @@ sys 	0m0.005s
 **ZOMG 0.025 motherfucking seconds!** That's blazing fast!! So I think the morale is pretty clear: next time you want to optimize your scripts, please think about dying first. I think you'll save everyone a lot of time!
 
 ![sonic is so slow](http://resource.mmgn.com/Gallery/full/Too-slow-sonic-1041428.jpg)
-(comic brought to you by [completelyseriouscomis.com](http://completelyseriouscomis.com))
+(comic brought to you by [completelyseriouscomics.com](http://completelyseriouscomics.com/))
 
