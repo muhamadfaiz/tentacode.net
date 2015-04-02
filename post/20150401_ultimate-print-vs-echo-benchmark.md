@@ -66,7 +66,7 @@ All right a little better! `print` is 0,018 second faster than `echo`, not much 
 
 ## Round 2 - Here comes a new challenger!
 
-And this is where it occured to me… to be honest this thought only is what motivated me to write this post. I've always heard that `die()` is actually the quickest way to output something, for example `<?php die("Hello World!");` would be the fastest ever Hello World you could ever write, but I've never really used `die()` for that purpose, so lets see what it got!!
+And this is when it occured to me… to be honest this thought only is what motivated me to write this post. I've always heard that `die()` is actually the quickest way to output something, for example `<?php die("Hello World!");` would be the fastest ever Hello World you could ever write, but I've never really used `die()` for that purpose, so lets see what it got!!
 
 ```php
 <?php
