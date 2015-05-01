@@ -51,7 +51,22 @@ class Content
         $markdown = $this->getMarkdownBody();
         $parser = new ParsedownExtra();
         
-        return $parser->text($markdown);
+        $html = $parser->text($markdown);
+        $html = $this->autoAnchor($html);
+
+        return $html;
+    }
+
+    protected function autoAnchor($html)
+    {
+        // on each title, auto set anchor
+        $html = preg_replace_callback('/<h([1-6])>(.*)<\/h([1-6])>/u', function($matches) {
+            $id = strtolower(preg_replace('/[\W|_]/', '', $matches[2]));
+            
+            return sprintf('<h%s id="%s">%s</h%s>', $matches[1], $id, $matches[2], $matches[3]);
+        }, $html);
+
+        return $html;
     }
 
     protected function getMarkdownBody()
