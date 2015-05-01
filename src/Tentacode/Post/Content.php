@@ -2,7 +2,7 @@
 
 namespace Tentacode\Post;
 
-use Parsedown;
+use ParsedownExtra;
 
 class Content
 {
@@ -49,7 +49,7 @@ class Content
     public function getBody()
     {
         $markdown = $this->getMarkdownBody();
-        $parser = new Parsedown();
+        $parser = new ParsedownExtra();
         
         return $parser->text($markdown);
     }
