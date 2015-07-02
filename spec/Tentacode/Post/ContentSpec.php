@@ -51,4 +51,18 @@ EOD;
             "<pre><code class=\"language-php\">function print_and_stop(\$message) { die(\$message); }</code></pre>"
         );
     }
+
+    function it_auto_add_anchor_to_titles()
+    {
+        $markdown = <<<'EOD'
+# Aujourd'hui, j'ai mangé des pâtes, VDM.
+
+## Le Marvelous Title
+EOD;
+
+        $this->beConstructedWith($markdown);
+        $this->getBody()->shouldReturn(
+            '<h2 id="lemarveloustitle">Le Marvelous Title</h2>'
+        );
+    }
 }

@@ -9,7 +9,7 @@
         "twig/twig": "*",
         "symfony/twig-bridge": "*",
         "symfony/finder": "~2.5",
-        "erusev/parsedown": "~1.5",
+        "erusev/parsedown-extra": "dev-master",
         "ext-mbstring": "*"
     },
     "require-dev": {
