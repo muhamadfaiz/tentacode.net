@@ -31,6 +31,10 @@ class Application extends BaseApplication
             ]); 
         }); 
 
+        $this->get('/contact-me', function() { 
+            return $this->renderPratchettResponse('Contact/contact_me.html.twig'); 
+        }); 
+
         $this
             ->get('/{slug}', function($slug) { 
                 return $this->renderPratchettResponse('Post/post.html.twig', [
