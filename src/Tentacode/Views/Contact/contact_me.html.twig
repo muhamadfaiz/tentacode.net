@@ -2,23 +2,26 @@
 
 {% block comments '' %}
 
-{% block content %}
-    <article class="post-content__post">
-        <header class="post__header">
-            <h1 class="post__title">How to contact me</h1>
-        </header>
-        <p>
-            You can join me on twitter <a href="https://twitter.com/tentacode">@tentacode</a> or directly send me an email to <span id="encodedEmail">😃😏😎😔😁😃😔💻😇😁😂😒😉😅😌😐😉😌😌😅😔💩😃😏😍</span>.
-        </p>
-        <p>
-            If by any chance you can't read emojis, you can decode my email by clicking on the button bellow.
-        </p>
+{% block columns %}
+    <div class="offset-by-three ten columns">
+        <article class="post-content__post">
+            <header class="post__header">
+                <h1 class="post__title">How to contact me</h1>
+            </header>
 
-        <div class="post__button">
-            <a id="decodeButton" class="btn btn-decode" href="#">Decode email</a>
-            <a id="encodeButton" class="btn btn-decode" style="display:none;" href="#">Encode email</a>
-        </div>
-    </article>
+            <p>
+                You can join me on twitter <a href="https://twitter.com/tentacode">@tentacode</a> or directly send me an email to <span id="encodedEmail">😃😏😎😔😁😃😔💻😇😁😂😒😉😅😌😐😉😌😌😅😔💩😃😏😍</span>.
+            </p>
+            <p>
+                If by any chance you can't read emojis, you can decode my email by clicking on the button bellow.
+            </p>
+
+            <div class="post__button">
+                <a id="decodeButton" class="btn btn-decode" href="#">Decode email</a>
+                <a id="encodeButton" class="btn btn-decode" style="display:none;" href="#">Encode email</a>
+            </div>
+        </article>
+    </div>
 {% endblock %}
 
 {% block javascripts %}
