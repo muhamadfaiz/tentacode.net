@@ -46,10 +46,11 @@
                         {% include 'Post/comments.html.twig' %}
                     {% endblock %}
 
-                    {% include 'Layout/footer.html.twig' %}
                 </div>
             </div>
         </div>
+        
+        {% include 'Layout/footer.html.twig' %}
 
         {% block javascripts %}
             <script src="/built/js/blog.js"></script>
