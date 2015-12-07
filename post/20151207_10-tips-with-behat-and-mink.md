@@ -1,4 +1,4 @@
-# 10 tricks with Behat3 and Mink
+# 10 tips with Behat3 and Mink
 
 I've been in 💖 with Behat for four years now, and when [@matthieunapoli](https://twitter.com/matthieunapoli) asked me about how to setup Behat3 in one of his project I realized that I'm using some tricks in my scenarios, so I might as well share them… I hope you'll find one or two useful!
 
