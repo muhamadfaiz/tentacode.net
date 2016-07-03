@@ -140,6 +140,6 @@ Voilà! Hope you enjoyed this useless, unreadable, fun SQL query. It looks like 
 
 ![Metabase questions list](/img/posts/metabase_question_doom.png)
 
-Thanks a lot for your attention, do leave me a message if you tried Metabase after reading this post. I hope I'll find more time to write more frequently here!
+Thanks a lot for your attention, do leave me a message if you tried Metabase after reading this post. I hope I'll find the time to write more frequently here!
 
 
