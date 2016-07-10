@@ -1,5 +1,15 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Tentacode — {{ post.content.title }}{% endblock %}
+
+{% block meta_description -%}
+    {{ post.content.excerpt(400) }}
+{%- endblock %}
+
+{% block meta_og_url -%}
+    http://tentacode.net{{ path('post', {'slug': post.slug}) }}
+{%- endblock %}
+
 {% block content %}
     <article class="post-content__post">
         <header class="post__header">
