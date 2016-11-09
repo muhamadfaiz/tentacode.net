@@ -54,7 +54,8 @@ Customization could be improved, for example it would be great to be able to pic
 
 It's too bad that in the GUI interface for adding a question, we can only go down to one relation level (For example : User -> Product, not User -> Product -> Category -> etc.), for Diwi's dataset it means I'm forced to write almost every question in SQL, where I could do everything in the GUI if I had an unlimited depth of relation. This also mean that my coworkers cannot easily use the questions I wrote in SQL if they don't have the knowledge.
 
-While using the hosted version of Metabase, it looks like I can't directly add a question I just made to a dashboard, I have a `Cannot read property 'display' of undefined` error message and I must go to the question list, hard refresh it before being able to add it in a dashboard, like there is some local cache issue in the browser. Same odd behaviour appears when you make a change to a dashboard, you are forced to hard refresh the page to see the changes you made. This works fine in the Mac client though.
+~~While using the hosted version of Metabase, it looks like I can't directly add a question I just made to a dashboard, I have a `Cannot read property 'display' of undefined` error message and I must go to the question list, hard refresh it before being able to add it in a dashboard, like there is some local cache issue in the browser. Same odd behaviour appears when you make a change to a dashboard, you are forced to hard refresh the page to see the changes you made. This works fine in the Mac client though.~~<br />
+Edit: this issue was not at all related to metabase but was because of too much caching by the server!
 
 But nonetheless, the team is doing a really great job, and are adding new features often. For example Metabase 0.18 adds a way to [add global filters to a dashboard](http://www.metabase.com/blog/dashboard-filters) (like a date picker). That feature is reeeeally gold and I can't wait to try it with our data.
 
@@ -68,7 +69,7 @@ To end this post with a bit of LOL, here is an absolutely not useful query that 
 Here is the deal: remember that Metabase does not have any scripting language, so all you got is your good old SQL. What if you want a graph based based on a date, for example you want to display every new registrations per hour you had in the last 24 hours, you could write something like this:
 
 ```sql
-SELECT 
+SELECT
 	DATE_FORMAT(registration_date, '%Y-%m-%d %H') AS "Time",
 	COUNT(*) AS "New subscriptions"
 FROM user
@@ -86,7 +87,7 @@ One way would be to add a `numbers` table with  sequential numbers in each row, 
 One other trick I found in a [stackoverflow thread](http://stackoverflow.com/questions/27954991/how-to-fill-missing-values-in-mysql-query) is this really cool way of generating a sequence of numbers using powers of two and `CROSS JOIN`:
 
 ```sql
-SELECT 
+SELECT
 	TWO_1.SeqValue + TWO_2.SeqValue + TWO_4.SeqValue +
 	TWO_8.SeqValue + TWO_16.SeqValue AS number
 FROM
@@ -136,10 +137,8 @@ GROUP BY date
 ORDER BY date ASC
 ```
 
-Voilà! Hope you enjoyed this useless, unreadable, fun SQL query. It looks like this in Metabase: 
+Voilà! Hope you enjoyed this useless, unreadable, fun SQL query. It looks like this in Metabase:
 
 ![Metabase questions list](/img/posts/metabase_question_doom.png)
 
 Thanks a lot for your attention, do leave me a message if you tried Metabase after reading this post. I hope I'll find the time to write more frequently here!
-
-
