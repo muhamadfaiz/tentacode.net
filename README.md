@@ -1,12 +1,10 @@
-[ ![Codeship Status for tentacode/tentacode-blog](https://codeship.com/projects/09870e40-18cf-0132-b7b1-16ba1201bcd0/status)](https://www.codeship.io/projects/34273)
+[ ![Codeship Status for tentacode/tentacode-blog](https://codeship.com/projects/09870e40-18cf-0132-b7b1-16ba1201bcd0/status)](https://www.codeship.io/projects/34273) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tentacode/tentacode-blog/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tentacode/tentacode-blog/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/tentacode/tentacode-blog/badges/build.png?b=master)](https://scrutinizer-ci.com/g/tentacode/tentacode-blog/build-status/master)
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tentacode/tentacode-blog/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tentacode/tentacode-blog/?branch=master)
+# Tentacode.net
 
-[![Build Status](https://scrutinizer-ci.com/g/tentacode/tentacode-blog/badges/build.png?b=master)](https://scrutinizer-ci.com/g/tentacode/tentacode-blog/build-status/master)
+Oh hi. It's the code of [my website](http://tentacode.net).
 
-# Tentacode Blog
-
-Oh hi. It's the code of [my blog](http://tentacode.net).
+![Website screenshot](web/img/website-screenshot.png)
 
 ## Run it
 
