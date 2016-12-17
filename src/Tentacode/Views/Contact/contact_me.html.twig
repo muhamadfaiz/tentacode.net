@@ -64,6 +64,8 @@
                 $('#encodeButton').show();
                 var decoded = encode($('#encodedEmail').text(), decodeEmoji);
                 $('#encodedEmail').html('<a href="mailto:' + decoded + '">' + decoded + '</a>');
+
+                return false;
             })
 
             $('#encodeButton').click(function(){
@@ -71,6 +73,8 @@
                 $('#decodeButton').show();
                 var encoded = encode($('#encodedEmail a').text(), encodeEmoji);
                 $('#encodedEmail').text(encoded);
+
+                return false;
             })
         })
     </script>
