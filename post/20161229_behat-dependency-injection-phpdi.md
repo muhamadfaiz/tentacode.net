@@ -8,7 +8,7 @@ The main feature of this new version is [Helper containers](https://github.com/B
 
 I think it's a good occasion to review a bit how Behat works but if you are already a Behat master you can…
 
-*tl;dr: go directly to [depency injection](#dependencyinjectiontotherescue) or the [PHP-DI example](#useyourphpdicontainer).*
+*tl;dr: go directly to [dependency injection](#dependencyinjectiontotherescue) or the [PHP-DI example](#useyourphpdicontainer).*
 
 ## Santa Claus Delivery
 
