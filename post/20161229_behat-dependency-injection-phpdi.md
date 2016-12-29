@@ -538,6 +538,8 @@ class ChristmasContainer implements ContainerInterface
 
 Voilà! This is a practical way of defining and injecting services, and we also are sure that services won't be instanciated more than once during the test suite execution.
 
+Edit: As [Konstantin rightfuly points out](https://twitter.com/BehatPHP/status/814481086411657217), using a Singleton container will break test isolation and can be a bad practice, it's your choice to see if you prefer to garanty that the state is reset between every scenario or if you value more the performance gained by setting up your container and services only once. My opinion is that when writing tests you can sometime allow yourself some practices that you won't allow in your production code, personally I don't really bother that the in memory state is perfectly reset (because what I test is generally in another process anyway, via a HTTP server or a command line utility), but I do care that my data state is properly reset between scenario (for example, the database should be reset). Anyway, just my opinion here. 😉
+
 ## Use your PHP-DI container
 
 Of course because Behat 3.3.0 uses Container Interop, you can use the same container as you use in your application if it follows this convention. This is REALLY helpful when you want to reuse some of your project code (yes, you can, even in your tests) like repositories. Here is how to create your [PHP-DI](http://php-di.org/) container in Behat:
